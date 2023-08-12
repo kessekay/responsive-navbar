@@ -2,103 +2,103 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  text-decoration: none;
-  list-style: none;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-header {
+/* Navbar styling */
+.navbar {
   position: relative;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 16px 150px;
-  background-color: rgb(35, 35, 35);
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 12px 20px;
 }
 
-.logo {
-  font-size: 20px;
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+  margin: 0 14px;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #12f328;
+}
+
+.logo a {
+  font-size: 24px;
   font-weight: 500;
-  color: rgb(255, 255, 255);
 }
 
-nav ul {
+.nav-links {
+  list-style: none;
   display: flex;
-  gap: 10px;
 }
 
-nav ul li a:hover {
-  color: rgb(163, 163, 163);
-}
-
-a {
-  cursor: pointer;
-  color: rgb(255, 255, 255);
-  font-weight: 400;
-  transition: all 0.3s ease-in-out;
+.nav-links li {
+  margin-right: 15px;
 }
 
 button {
-  width: 100px;
   font-size: 16px;
-  padding: 10px;
-  border-radius: 30px;
+  font-weight: 400;
+  padding: 8px 20px;
   border: none;
-  color: rgb(255, 255, 255);
-  background-color: rgb(59, 102, 102);
+  border-radius: 30px;
+  color: #ffffff;
+  background-color: #0e8a1b;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in;
 }
 
 button:hover {
-  background-color: rgb(71, 135, 135);
+  background-color: rgb(15, 171, 30);
 }
 
-img {
-  display: none;
-  z-index: 10;
-}
-
-.side-nav {
+.bars {
   position: absolute;
-  top: 0;
-  left: 0;
-  display: none;
+  top: 16px;
+  right: 20px;
+  height: 24px;
+  cursor: pointer;
+}
+
+/* sidebar styling */
+
+.side-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   height: 100vh;
   width: 100%;
-  background-color: black;
+  padding-top: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #ebebeb;
 }
 
-main {
-  text-align: center;
-  margin: 200px auto;
+.side-menu a {
+  color: #333;
+  font-size: 16px;
+  text-decoration: none;
 }
 
-@media only screen and (max-width:900px) {
+/* media queries */
 
-  header {
-    padding: 16px 30px;
-  }
-
-  img {
-    position: absolute;
-    top: 13px;
-    right: 30px;
-    display: block;
-  }
-
-  .nav-menu {
+@media only screen and (min-width: 720px) {
+  .bars {
     display: none;
   }
 
-  button {
+  .side-menu {
     display: none;
   }
+}
 
-  .side-nav {
-    display: flex;
-    flex-direction: column;
-
-  }
-
+@media only screen and (max-width: 720px) {
+  .nav-links li, button {
+    display: none;
+  } 
 }

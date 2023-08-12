@@ -1,11 +1,8 @@
-
-function toggle() {
-  let menu = document.getElementById("toggle-nav");
-  if (menu.style.display === "flex") {
-    menu.style.display = "none";
+function showMenu() {
+  let navLinks = document.getElementById("navLinks");
+  if (navLinks.style.display === "flex") {
+      navLinks.style.display = "none";
   } else {
-    menu.style.display = "flex";
+      navLinks.style.display = "flex";
   }
 }
-
-console.log("23")
